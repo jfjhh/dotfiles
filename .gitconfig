@@ -1,0 +1,15 @@
+[user]
+	name = jfjhh
+	email = alex.striff1@gmail.com
+[push]
+	default = simple
+[alias]
+	s = status
+	a = add
+	c = commit
+	b = branch
+	pom = push origin master
+	l = log
+	co = checkout
+	r = reset
+

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+slock &
+dwm
+
