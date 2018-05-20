@@ -7,6 +7,8 @@
 !.config/
 !.config/htop/
 !.config/htop/htoprc
+!.config/mpv
+!.config/mpv/mpv.conf
 !.config/wallpaper.png
 !.config/redshift.conf
 !.emacs
