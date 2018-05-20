@@ -1,0 +1,18 @@
+set from = "alex.striff1@gmail.com"
+set realname = "Alex Striff"
+set imap_user = "alex.striff1@gmail.com"
+my_hdr X-PGP-Key: https://pgp.mit.edu/pks/lookup?op=get&search=0x0E277A8AF8BB96F1
+set signature="~/.mutt/personal.signature"
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set postponed = "+[Google Mail]/Drafts"
+set trash = "+[Google Mail]/Trash"
+set smtp_url = "smtp://alex.striff1@smtp.gmail.com:587/"
+
+set smtp_pass = $my_personal_pass
+set imap_pass = $my_personal_pass
+
+set pgp_encrypt_only_command="pgpewrap gpg --batch --quiet --no-verbose --output - --encrypt --textmode --armor --always-trust --encrypt-to 0xF8BB96F1 -- -r %r -- %f"
+set pgp_encrypt_sign_command="pgpewrap gpg --passphrase-fd 0 --batch --quiet --no-verbose --textmode --output - --encrypt --sign %?a?-u %a? --armor --always-trust --encrypt-to 0xF8BB96F1 -- -r %r -- %f"
+set pgp_sign_as=0xF8BB96F1
+

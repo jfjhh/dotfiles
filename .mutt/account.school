@@ -1,0 +1,13 @@
+set from = "striffa@reed.edu"
+set realname = "Alex Striff"
+set imap_user = "striffa@reed.edu"
+set signature="~/.mutt/school.signature"
+set folder = "imaps://imap.googlemail.com:993"
+set spoolfile = "+INBOX"
+set postponed = "+[Google Mail]/Drafts"
+set trash = "+[Google Mail]/Trash"
+set smtp_url = "smtps://striffa@reed.edu@smtp.googlemail.com:465/"
+
+set smtp_pass = $my_school_pass
+set imap_pass = $my_school_pass
+

@@ -1,11 +1,35 @@
 *
 
+!.bash_aliases
 !.bash_logout
 !.bash_profile
 !.bashrc
-!.config
+!.config/
+!.config/htop/
+!.config/htop/htoprc
+!.config/wallpaper.png
+!.config/redshift.conf
+!.emacs
+!.fehbg
 !.gitconfig
 !.gitignore
 !.gitignore_global
+!.inputrc
+!.mailcap
+!.mutt/
+!.mutt/*
+.mutt/certificates
+.mutt/*.gpg
+!.screen/
+!.screen/*
+!.screenrc
+!.vim/
+!.vim/**/*
+.vim/spell/
+.vim/view/
+!.vimrc
+!.xbindkeysrc
+!.xmodmap
+!.Xresources
 !.xsession
 

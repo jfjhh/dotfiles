@@ -1,0 +1,4 @@
+# text/html; elinks -dump -dump-charset iso-8859-15 -default-mime-type text/html %s; needsterminal; copiousoutput;
+text/html; chrome-wrapper.sh %s;
+application/pdf; evince %s; copiousoutput;
+

@@ -1,0 +1,68 @@
+# Local folders for cached headers and certificates.
+set header_cache =~/.mutt/cache/headers
+set message_cachedir =~/.mutt/cache/bodies
+set certificate_file =~/.mutt/certificates
+
+# Support multiple emails.
+macro index <f2> '<change-folder>imaps://imap.gmail.com<enter>'
+macro index <f3> '<change-folder>imaps://imap.googlemail.com<enter>'
+
+# Load config for each user account.
+folder-hook 'gmail.com' 'source ~/.mutt/account.personal'
+folder-hook 'googlemail.com' 'source ~/.mutt/account.school'
+
+# Password hook to only enter password once per account (gpg pass, not email pass).
+set my_personal_pass=`gpg -d ~/.mutt/personal.pass.gpg`
+set my_school_pass=`gpg -d ~/.mutt/school.pass.gpg`
+account-hook google.com 'set imap_user="alex.striff1@gmail.com" imap_pass=$my_personal_pass'
+account-hook googlemail.com 'set imap_user="striffa@reed.edu" imap_pass=$my_school_pass'
+
+# Switch to default account on startup.
+source ~/.mutt/account.school
+
+# Solarized dark 16 colorscheme
+source ~/.mutt/solarized-dark-16.muttrc
+
+# Securing.
+set move = no
+set imap_keepalive = 900
+
+# Use pgp.
+set pgp_decode_command="gpg %?p?--passphrase-fd 0? --no-verbose --batch --output - %f"
+set pgp_verify_command="gpg --no-verbose --batch --output - --verify %s %f"
+set pgp_decrypt_command="gpg --passphrase-fd 0 --no-verbose --batch --output - %f"
+set pgp_sign_command="gpg --no-verbose --batch --output - --passphrase-fd 0 --armor --detach-sign --textmode %?a?-u %a? %f"
+set pgp_clearsign_command="gpg --no-verbose --batch --output - --passphrase-fd 0 --armor --textmode --clearsign %?a?-u %a? %f"
+set pgp_import_command="gpg --no-verbose --import -v %f"
+set pgp_export_command="gpg --no-verbose --export --armor %r"
+set pgp_verify_key_command="gpg --no-verbose --batch --fingerprint --check-sigs %r"
+set pgp_list_pubring_command="gpg --no-verbose --batch --with-colons --list-keys %r"
+set pgp_list_secring_command="gpg --no-verbose --batch --with-colons --list-secret-keys %r"
+set pgp_autosign=no
+set pgp_autoencrypt=no
+set pgp_replyencrypt=yes
+set pgp_timeout=1800
+set pgp_good_sign="^gpg: Good signature from"
+
+# Update new email content lots.
+set timeout = 30
+set mail_check = 20
+
+# Header settings.
+set hdrs
+unset header
+folder-hook . "ignore *"
+folder-hook . "unignore From: To: Date: Subject: Cc: Bcc: Reply-To:"
+
+# View HTML email.
+set implicit_autoview
+auto_view text/html application/x-pgp-message
+alternative_order text/plain text/enriched text/html
+set mailcap_path="~/.mailcap"
+
+# Make viewing attachments easier.
+bind attach <return> view-mailcap
+
+# Flow text.
+set text_flowed
+

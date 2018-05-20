@@ -1,0 +1,22 @@
+# Base screenrc file.
+
+# Options.
+vbell off		# No visible bells.
+startup_message off	# No startup message.
+defutf8 on		# Force UTF-8.
+nonblock on		# Set nonblock.
+altscreen on		# Fix stupid screen overwriting (E.g. Vim in scrollback).
+defscrollback 16384	# Set huge scrollback.
+bind s split		# Get rid of silly XOFF stuff.
+minmsgwait 0		# Don't delay before messages (E.g. entering copy mode).
+escape ``		# Escape key is ` (backtick).
+defbce "on"		# Allow background color to change.
+
+# Status bar settings.
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%{.KW} %-Lw%{.kG}%n%f %t%{-}%+Lw %=%{..G} %H %{..C} | %D %M | %Y-%m-%d | %c "
+
+# Split styling.
+sorendition "=bs dd"
+

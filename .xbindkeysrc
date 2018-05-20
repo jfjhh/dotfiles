@@ -1,0 +1,126 @@
+###########################
+# xbindkeys configuration #
+###########################
+#
+# Version: 1.8.6
+#
+# If you edit this file, do not forget to uncomment any lines
+# that you change.
+# The pound(#) symbol may be used anywhere for comments.
+#
+# To specify a key, you can use 'xbindkeys --key' or
+# 'xbindkeys --multikey' and put one of the two lines in this file.
+#
+# The format of a command line is:
+#    "command to start"
+#       associated key
+#
+# A list of keys is in /usr/include/X11/keysym.h and in
+# /usr/include/X11/keysymdef.h
+# The XK_ is not needed.
+#
+# List of modifier:
+#   Release, Control, Shift, Mod1 (Alt), Mod2 (NumLock),
+#   Mod3 (CapsLock), Mod4, Mod5 (Scroll).
+#
+#
+# The release modifier is not a standard X modifier, but you can
+# use it if you want to catch release events instead of press events
+#
+# By defaults, xbindkeys does not pay attention with the modifiers
+# NumLock, CapsLock and ScrollLock.
+# Uncomment the lines above if you want to pay attention to them.
+#
+#keystate_numlock = enable
+#keystate_capslock = enable
+#keystate_scrolllock= enable
+#
+##################################
+#
+"xbindkeys_show"
+  control+shift + q
+#
+##################################
+#
+# Custom alsamixer volume control keys:
+#
+# Raise volume:
+"~/bin/amixer-volup"
+    m:0x10 + c:123
+    Mod2 + XF86AudioRaiseVolume
+# Lower volume:
+"~/bin/amixer-voldown"
+    m:0x10 + c:122
+    Mod2 + XF86AudioLowerVolume
+# Mute/Unmute:
+"~/bin/amixer-mute"
+    m:0x10 + c:121
+    Mod2 + XF86AudioMute
+#
+##################################
+#
+# Toggles play/pause for cmus:
+"cmus-remote -u"
+    m:0x10 + c:172
+    Mod2 + XF86AudioPlay
+# Increases volume +10%:
+"cmus-remote -v '+10%'"
+    m:0x11 + c:123
+    Shift+Mod2 + XF86AudioRaiseVolume
+# Decreases volume -10%:
+"cmus-remote -v '-10%'"
+    m:0x11 + c:122
+    Shift+Mod2 + XF86AudioLowerVolume
+# Rewinds 5s:
+"cmus-remote -k -5"
+    m:0x11 + c:173
+    Shift+Mod2 + XF86AudioPrev
+# Advances 5s:
+"cmus-remote -k +5"
+    m:0x11 + c:171
+    Shift+Mod2 + XF86AudioNext
+# Previous in playlist:
+"cmus-remote -r"
+    m:0x10 + c:173
+    Mod2 + XF86AudioPrev
+"cmus-remote -r"
+    m:0x1 + c:83
+    Shift + KP_Left
+# Next in playlist:
+"cmus-remote -n"
+    m:0x10 + c:171
+    Mod2 + XF86AudioNext
+"cmus-remote -n"
+    m:0x1 + c:85
+    Shift + KP_Right
+# Toggle continue:
+"cmus-remote -S"
+    m:0x10 + c:174
+    Mod2 + XF86AudioStop
+# Toggle repeat on or off:
+"cmus-remote -R"
+    m:0x11 + c:174
+    Shift+Mod2 + XF86AudioStop
+# Toggle repeat_current or (repeat all):
+"cmus-remote -C 'toggle repeat_current'"
+    m:0x11 + c:172
+    Shift+Mod2 + XF86AudioPlay
+#
+##################################
+#
+# Lock the screen:
+"slock"
+    m:0x40 + c:133 + c:134
+    Mod4 + Super_L + Super_R
+# Suspend the laptop:
+"bin/laptop-suspend"
+    m:0x41 + c:133 + c:134
+    Shift+Mod4 + Super_L + Super_R
+# Toggle between normal and reading screens:
+"bin/toggle-xcalib"
+    m:0x54 + c:133 + c:134
+    Control+Mod4 + Super_L + Super_R
+#
+##################################
+# End of xbindkeys configuration #
+##################################
