@@ -25,6 +25,9 @@
 !.screen/
 !.screen/*
 !.screenrc
+!.urxvt/
+!.urxvt/ext/
+!.urxvt/ext/font-size
 !.vim/
 !.vim/**/*
 .vim/spell/
