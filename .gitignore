@@ -22,6 +22,7 @@
 !.mutt/*
 .mutt/certificates
 .mutt/*.gpg
+!.sbclrc
 !.screen/
 !.screen/*
 !.screenrc
