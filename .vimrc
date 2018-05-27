@@ -148,8 +148,8 @@ nnoremap <c-x> <c-w>x
 nnoremap <leader>sc :SyntasticCheck<cr>
 nnoremap Z= z=1<cr><cr>
 nnoremap zO zCzO
-nnoremap <space> za
-vnoremap <space> za
+nnoremap <space> zA
+vnoremap <space> zA
 " }}}
 
 " Augroups {{{
