@@ -1,6 +1,7 @@
 [ -z "$PS1" ] && return
 [ -d "$HOME/bin" ] && export PATH="$PATH:$HOME/bin"
 [ -d "$HOME/.local/bin" ] && export PATH="$PATH:$HOME/.local/bin"
+[ -d "$HOME/anaconda3/bin" ] && export PATH="/home/jfjhh/anaconda3/bin:$PATH"
 [ -x /usr/bin/lesspipe ] && export LESSOPEN="| lesspipe %s"
 export TERM='rxvt-unicode-256color'
 
