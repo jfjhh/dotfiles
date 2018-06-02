@@ -49,3 +49,6 @@
 [submodule ".vim/bundle/SimpylFold"]
 	path = .vim/bundle/SimpylFold
 	url = git@github.com:tmhedberg/SimpylFold.git
+[submodule ".vim/bundle/julia-vim"]
+	path = .vim/bundle/julia-vim
+	url = git@github.com:JuliaEditorSupport/julia-vim.git
