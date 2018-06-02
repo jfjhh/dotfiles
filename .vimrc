@@ -45,7 +45,7 @@ let g:Tex_FoldedEnvironments='verbatim,comment,eq,gather,align,figure,table,theb
 let g:Tex_MultipleCompileFormats='dvi,pdf'
 
 " Vim-Markdown
-let g:vim_markdown_fenced_languages = ['c', 'bash=sh', 'lisp']
+let g:vim_markdown_fenced_languages = ['c', 'bash=sh']
 let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_math = 1
 
