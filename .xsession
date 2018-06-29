@@ -1,6 +1,7 @@
 [ -d "$HOME/bin" ] && export PATH="$PATH:$HOME/bin"
 [ -d "$HOME/.local/bin" ] && export PATH="$PATH:$HOME/.local/bin"
 (slock && eval $(keychain id_rsa)) &
+xbacklight -set 10 &
 xrdb ~/.Xresources &
 slstatus &
 redshift &
