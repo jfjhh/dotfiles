@@ -9,5 +9,8 @@ redshift &
 xautolock -time 5 -locker slock -corners 0+-0 -cornerdelay 1 -cornersize 2 &
 xmodmap ~/.xmodmap &
 xbindkeys &
+(sleep 0.2 && urxvt ) &> /dev/null &
+(sleep 0.2 && google-chrome-unstable ) &> /dev/null &
+(sleep 0.2 && wicd-gtk ) &> /dev/null &
 exec dwm
 
