@@ -34,15 +34,27 @@ let g:syntastic_asm_checkers  = ['nasm']
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq   = 0
 let g:syntastic_auto_jump     = 0
-let g:syntastic_mode_map      = { 'mode': 'active' }
+let g:syntastic_mode_map      = {
+			\ 'mode': 'active',
+			\ 'passive_filetypes': ['tex'] }
 
 " Vim-LaTeX
 set grepprg=grep\ -nH\ $*
-let g:tex_flavor='latex'
-let g:Tex_DefaultTargetFormat='pdf'
-let g:Tex_ViewRule_pdf='evince'
-let g:Tex_FoldedEnvironments='verbatim,comment,eq,gather,align,figure,table,thebibliography,keywords,abstract,titlepage,frame,problem,subproblem,theorem,thm,subthm'
-let g:Tex_MultipleCompileFormats='dvi,pdf'
+let g:tex_flavor                 = 'latex'
+let g:Tex_DefaultTargetFormat    = 'pdf'
+let g:Tex_ViewRule_pdf           = 'evince'
+let g:Tex_FoldedEnvironments     = 'verbatim,comment,eq,gather,align,figure,table,thebibliography,keywords,abstract,titlepage,frame,problem,subproblem,theorem,thm,proof,prf,lemma,lem,definition,defn,claim,clm'
+let g:Tex_MultipleCompileFormats = 'dvi,pdf'
+let g:Tex_IgnoredWarnings        =
+    \'Underfull'."\n".
+    \'Overfull'."\n".
+    \'specifier changed to'."\n".
+    \'You have requested'."\n".
+    \'Missing number, treated as zero.'."\n".
+    \'There were undefined references'."\n".
+    \'Citation %.%# undefined'."\n".
+    \'Do not use \@'."\n"
+let g:Tex_IgnoreLevel = 8
 
 " Vim-Markdown
 let g:vim_markdown_fenced_languages = ['c', 'bash=sh']
@@ -132,14 +144,8 @@ inoremap jk <esc>
 inoremap JK <esc>
 nnoremap <leader>ev :split $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
-nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
-nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
-nnoremap <leader>< viw<esc>a><esc>hbi<<esc>lel
-nnoremap <leader>[ viw<esc>a]<esc>hbi[<esc>lel
-nnoremap <leader>( viw<esc>a)<esc>hbi(<esc>lel
-nnoremap <leader>{ viw<esc>a}<esc>hbi{<esc>lel
 nnoremap <leader>re :call WriteReindent()<cr>
-nnoremap <silent> <leader>l :nohlsearch<cr><leader>l
+nnoremap <silent> <leader>l :nohlsearch<cr>
 nnoremap <c-h> <c-w>h
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
@@ -148,8 +154,8 @@ nnoremap <c-x> <c-w>x
 nnoremap <leader>sc :SyntasticCheck<cr>
 nnoremap Z= z=1<cr><cr>
 nnoremap zO zCzO
-nnoremap <space> zA
-vnoremap <space> zA
+nnoremap <space> za
+vnoremap <space> za
 " }}}
 
 " Augroups {{{
@@ -197,10 +203,12 @@ endif
 set backspace=indent,eol,start
 set foldlevelstart=0
 set number
+set relativenumber
 set numberwidth=3
 set ruler
 set hlsearch
 set incsearch
+set lazyredraw
 set ignorecase
 set smartcase
 set scrolloff=999
