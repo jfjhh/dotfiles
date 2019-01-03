@@ -21,7 +21,7 @@
 
 !! START URxvt
 !!
-URxvt.font:              xft:Dejavu\ Sans\ Mono:pixelsize=16
+URxvt.font:              xft:Dejavu\ Sans\ Mono:pixelsize=16:antialias=true
 URxvt.loginshell:        true
 URxvt.savelines:         16384
 URxvt.secondaryWheel:    true
@@ -34,7 +34,6 @@ URxvt.perl-ext:          default,matcher,font-size
 URxvt.url-launcher:      /usr/bin/google-chrome-unstable
 URxvt.matcher.button:    1
 URxvt.matcher.pattern.1: \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
-URxvt.perl-ext-common:   ...,font-size
 URxvt.keysym.C-Up:       perl:font-size:increase
 URxvt.keysym.C-Down:     perl:font-size:decrease
 URxvt.keysym.C-S-Up:     perl:font-size:incglobal
