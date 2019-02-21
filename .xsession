@@ -7,6 +7,7 @@ slstatus &
 redshift &
 ~/.fehbg &
 xautolock -time 5 -locker slock -corners 0+-0 -cornerdelay 1 -cornersize 2 &
+syndaemon -d -i 0.5 &
 xmodmap ~/.xmodmap &
 xbindkeys &
 (sleep 0.1 && urxvt ) &> /dev/null &
