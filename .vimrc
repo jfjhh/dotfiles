@@ -41,6 +41,7 @@ let g:syntastic_mode_map      = {
 " Vim-LaTeX
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor                 = 'latex'
+let g:Tex_BibtexFlavor           = 'biber'
 let g:Tex_DefaultTargetFormat    = 'pdf'
 let g:Tex_ViewRule_pdf           = 'evince'
 let g:Tex_FoldedEnvironments     = 'verbatim,comment,eq,gather,align,figure,table,thebibliography,keywords,abstract,titlepage,frame,problem,subproblem,theorem,thm,proof,prf,lemma,lem,definition,defn,claim,clm'
