@@ -21,7 +21,7 @@
 
 !! START URxvt
 !!
-URxvt.font:              xft:Dejavu\ Sans\ Mono:pixelsize=16:antialias=true
+URxvt.font:              xft:Dejavu Sans Mono:pixelsize=12:antialias=true
 URxvt.loginshell:        true
 URxvt.savelines:         16384
 URxvt.secondaryWheel:    true
@@ -40,29 +40,45 @@ URxvt.keysym.C-S-Up:     perl:font-size:incglobal
 URxvt.keysym.C-S-Down:   perl:font-size:decglobal
 URxvt.keysym.C-equal:    perl:font-size:reset
 URxvt.keysym.C-slash:    perl:font-size:show
-!! Solarized Dark Colors.
-URxvt.background:             S_base03
-URxvt.foreground:             S_base0
-URxvt.fadeColor:              S_base03
-URxvt.cursorColor:            S_base1
-URxvt.pointerColorBackground: S_base01
-URxvt.pointerColorForeground: S_base1
-URxvt.color0:                 S_base02
-URxvt.color8:                 S_base03
-URxvt.color1:                 S_red
-URxvt.color9:                 S_orange
-URxvt.color2:                 S_green
-URxvt.color10:                S_base01
-URxvt.color3:                 S_yellow
-URxvt.color11:                S_base00
-URxvt.color4:                 S_blue
-URxvt.color12:                S_base0
-URxvt.color5:                 S_magenta
-URxvt.color13:                S_violet
-URxvt.color6:                 S_cyan
-URxvt.color14:                S_base1
-URxvt.color7:                 S_base2
-URxvt.color15:                S_base3
+
+urxvt*background: #EDEDED
+urxvt*foreground: #000000
+urxvt*cursorColor: #7d7d7d
+urxvt*colorUL: #4E4FFF
+
+!BLACK
+urxvt*color0:  #FFFFFF
+urxvt*color8:  #9A9A9A
+!! RED
+urxvt*color1:               #121212
+urxvt*color9:               #1C1C1C
+!
+!! GREEN
+urxvt*color2:               #A5A5A5
+urxvt*color10:              #A4A4A4
+!
+!!YELLOW
+urxvt*color3:               #777777
+urxvt*color11:              #646464
+!
+!! BLUE
+urxvt*color4:               #999999
+urxvt*color12:              #7C7C7C
+!
+!! MAGENTA
+urxvt*color5:               #4C4C4C
+urxvt*color13:              #515151
+!
+!! CYAN
+urxvt*color6:               #2B2B2B
+urxvt*color14:              #322929
+!
+!!WHITE
+urxvt*color7:  #000000
+urxvt*color15: #101010
+!
+!
+
 !!
 !! END URxvt.
 

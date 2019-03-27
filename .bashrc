@@ -3,7 +3,6 @@
 [ -d "$HOME/.local/bin" ] && export PATH="$PATH:$HOME/.local/bin"
 [ -d "$HOME/anaconda3/bin" ] && export PATH="/home/jfjhh/anaconda3/bin:$PATH"
 [ -x /usr/bin/lesspipe ] && export LESSOPEN="| lesspipe %s"
-export TERM='rxvt-unicode-256color'
 
 shopt -s histappend checkwinsize cmdhist globstar
 stty ixany stop ''
@@ -14,8 +13,7 @@ HISTSIZE=16384
 HISTFILESIZE=32768
 PROMPT_DIRTRIM=3
 
-PSX="\[\e[0;36m\]\$? \[\e[1;34m\]\u\[\e[0m\]@\[\e[1;32m\]\h "\
-"\[\e[0;35m\]\w\[\e[0;1;35m\] "
+PSX="\[\e[0;35m\]\w\[\e[0;1;35m\] "
 PS1="$PSX$\[\e[0m\] "
 PS2="$PSX>\[\e[0m\] "
 

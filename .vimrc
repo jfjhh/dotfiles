@@ -63,7 +63,16 @@ let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_math = 1
 
 " Vim2HS
-let g:haskell_conceal_wide = 1
+let g:haskell_conceal = 0
+
+" Haskell-Vim
+let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
+let g:haskell_enable_recursivedo = 1      " to enable highlighting of `mdo` and `rec`
+let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`
+let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
+let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
+let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
+let g:haskell_backpack = 1                " to enable highlighting of backpack keywords
 
 " Pathogen.
 call pathogen#infect()
@@ -71,13 +80,10 @@ call pathogen#infect()
 " }}}
 
 " Syntax highlighting customizations. {{{
-set t_Co=16
+set t_Co=256
 syntax enable
-set background=dark
-let g:solarized_visibility='low'
-let g:solarized_termtrans=1
-let g:solarized_menu=0
-colorscheme solarized
+set background=light
+colorscheme PaperColor
 "
 " Highlight text different when it is after the 80th column. This is a test line for overlength lines.
 hi OverLength term=reverse cterm=reverse gui=reverse
@@ -203,8 +209,6 @@ endif
 " Options. {{{
 set backspace=indent,eol,start
 set foldlevelstart=0
-set number
-set relativenumber
 set numberwidth=3
 set ruler
 set hlsearch
@@ -222,7 +226,6 @@ set sidescrolloff=10
 set list
 set listchars=precedes:<,extends:>,tab:>\ ,trail:@
 set complete=.,w,b,u,t,i,kspell
-set cursorline
 set showmatch
 set matchtime=1
 set writeany
