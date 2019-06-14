@@ -31,7 +31,7 @@ URxvt.visualBell:        true
 URxvt.fading:            20
 URxvt.perl-lib:          /usr/lib/urxvt/perl/
 URxvt.perl-ext:          default,matcher,font-size
-URxvt.url-launcher:      /usr/bin/google-chrome-unstable
+URxvt.url-launcher:      /usr/bin/google-chrome-beta
 URxvt.matcher.button:    1
 URxvt.matcher.pattern.1: \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
 URxvt.keysym.C-Up:       perl:font-size:increase
@@ -47,35 +47,35 @@ urxvt*cursorColor: #7d7d7d
 urxvt*colorUL: #4E4FFF
 
 !BLACK
-urxvt*color0:  #FFFFFF
-urxvt*color8:  #9A9A9A
+!urxvt*color0:  #FFFFFF
+!urxvt*color8:  #9A9A9A
 !! RED
-urxvt*color1:               #121212
-urxvt*color9:               #1C1C1C
+!urxvt*color1:               #121212
+!urxvt*color9:               #1C1C1C
 !
 !! GREEN
-urxvt*color2:               #A5A5A5
-urxvt*color10:              #A4A4A4
+!urxvt*color2:               #A5A5A5
+!urxvt*color10:              #A4A4A4
 !
 !!YELLOW
-urxvt*color3:               #777777
-urxvt*color11:              #646464
+!urxvt*color3:               #777777
+!urxvt*color11:              #646464
 !
 !! BLUE
-urxvt*color4:               #999999
-urxvt*color12:              #7C7C7C
+!urxvt*color4:               #999999
+!urxvt*color12:              #7C7C7C
 !
 !! MAGENTA
-urxvt*color5:               #4C4C4C
-urxvt*color13:              #515151
+!urxvt*color5:               #4C4C4C
+!urxvt*color13:              #515151
 !
 !! CYAN
-urxvt*color6:               #2B2B2B
-urxvt*color14:              #322929
+!urxvt*color6:               #2B2B2B
+!urxvt*color14:              #322929
 !
 !!WHITE
-urxvt*color7:  #000000
-urxvt*color15: #101010
+!urxvt*color7:  #000000
+!urxvt*color15: #101010
 !
 !
 

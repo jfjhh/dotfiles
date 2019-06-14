@@ -83,7 +83,7 @@ call pathogen#infect()
 set t_Co=256
 syntax enable
 set background=light
-colorscheme PaperColor
+colorscheme delek
 "
 " Highlight text different when it is after the 80th column. This is a test line for overlength lines.
 hi OverLength term=reverse cterm=reverse gui=reverse

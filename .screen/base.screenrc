@@ -20,3 +20,22 @@ hardstatus string "%{.KW} %-Lw%{.kG}%n%f %t%{-}%+Lw %=%{..G} %H %{..C} | %D %M |
 # Split styling.
 sorendition "=bs dd"
 
+# Navigate regions with ctrl-arrows.
+bindkey "^[[1;5D" focus left
+bindkey "^[[1;5C" focus right
+bindkey "^[[1;5A" focus up
+bindkey "^[[1;5B" focus down
+
+# F10 puts screen into resize mode.
+bindkey "[21~" eval "command -c rsz"
+
+# Use hjkl keys to resize regions.
+bind -c rsz h eval "resize -h -1" "command -c rsz"	# Left.
+bind -c rsz j eval "resize -v +1" "command -c rsz"	# Down.
+bind -c rsz k eval "resize -v -1" "command -c rsz"	# Up.
+bind -c rsz l eval "resize -h +1" "command -c rsz"	# Right.
+
+# Startup settings.
+bind c screen 1		# Window numbering starts at 1 not 0.
+bind 0 select 10	# 0 selects 10.
+
