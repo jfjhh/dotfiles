@@ -4,5 +4,6 @@ lit 20 &
 xrdb ~/.Xresources &
 ~/.fehbg &
 slstatus 2> /dev/null &
+slock &
 exec dwm
 
