@@ -41,9 +41,9 @@ URxvt.keysym.C-S-Down:   perl:font-size:decglobal
 URxvt.keysym.C-equal:    perl:font-size:reset
 URxvt.keysym.C-slash:    perl:font-size:show
 
-urxvt*background: #ffffff
-urxvt*foreground: #000000
-urxvt*cursorColor: #7d7d7d
+urxvt*foreground: #ffffff
+urxvt*background: #000000
+urxvt*cursorColor: #4d4d4d
 urxvt*colorUL: #4E4FFF
 
 !BLACK

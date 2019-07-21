@@ -223,7 +223,6 @@ set textwidth=80
 set wrapmargin=0
 set sidescroll=5
 set sidescrolloff=10
-set list
 set listchars=precedes:<,extends:>,tab:>\ ,trail:@
 set complete=.,w,b,u,t,i,kspell
 set showmatch

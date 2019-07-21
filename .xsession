@@ -2,7 +2,6 @@
 [ -d "$HOME/.local/bin" ] && export PATH="$PATH:$HOME/.local/bin"
 lit 20 &
 xrdb ~/.Xresources &
-~/.fehbg &
 slstatus 2> /dev/null &
 slock &
 exec dwm
