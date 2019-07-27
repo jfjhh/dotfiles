@@ -17,7 +17,7 @@ PSX="\[\e[0;35m\]\w\[\e[0;1;35m\] "
 PS1="$PSX$\[\e[0m\] "
 PS2="$PSX>\[\e[0m\] "
 
-eval "`keychain -q --eval ~/.ssh/id_rsa`"
+keychain -q ~/.ssh/id_rsa
 
 [ -f ~/.bash_aliases ] && . ~/.bash_aliases
 

@@ -82,7 +82,7 @@ call pathogen#infect()
 " Syntax highlighting customizations. {{{
 set t_Co=256
 syntax enable
-set background=light
+set background=dark
 colorscheme delek
 "
 " Highlight text different when it is after the 80th column. This is a test line for overlength lines.
