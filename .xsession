@@ -3,6 +3,7 @@
 lit 20 &
 xrdb ~/.Xresources &
 slstatus 2> /dev/null &
+redshift &
 slock &
 exec dwm
 

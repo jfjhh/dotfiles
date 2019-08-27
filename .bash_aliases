@@ -21,3 +21,9 @@ which() {
 		--read-functions --show-tilde --show-dot $@
 }; export -f which
 
+lcd() {
+	DIR="`locate -d "$HOME/.cache/mlocatedb-home" -bi "$1" \
+		| grep -v '\.' | head -1`"
+	[ -n "$DIR" ] && pushd "$DIR"
+}; export -f lcd
+
